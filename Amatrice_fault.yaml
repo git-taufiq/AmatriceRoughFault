@@ -9,7 +9,7 @@
     y: 0.0
     z: 0.0
   components: !ASAGI
-    file: Amatrice_fault_TnTsTd.nc
+    file: ASAGI/Amatrice_fault_TnTsTd.nc
     parameters: [T_n0,T_s0,T_d0]
     var: data
 [mu_s,mu_d,d_c,cohesion]: !AffineMap
@@ -22,6 +22,6 @@
     y: 0.0
     z: 0.0
   components: !ASAGI
-    file: Amatrice_fault_MusMudDcCoh.nc
+    file: ASAGI/Amatrice_fault_MusMudDcCoh.nc
     parameters: [mu_s,mu_d,d_c,cohesion]
     var: data
