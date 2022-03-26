@@ -1,0 +1,86 @@
+&equations
+MaterialFileName = 'Amatrice_material.yaml'
+FreqCentral = 5.0
+FreqRatio = 100
+/
+
+&IniCondition
+/
+
+&Boundaries
+BC_fs = 1
+BC_dr = 1
+BC_of = 1
+/
+
+&DynamicRupture
+FL = 2
+XRef = 0.0
+YRef = -100e3
+ZRef = 0.0
+refPointMethod = 1
+OutputPointType = 5
+ModelFileName = 'Amatrice_fault.yaml'
+magnitude_output_on = 1
+energy_rate_output_on = 1
+/
+
+&Elementwise
+printIntervalCriterion = 2
+printtimeinterval_sec = 0.05
+OutputMask = 1 1 1 1 1 1 1 1 1 1 1
+refinement = 1
+/
+
+&Pickpoint
+printtimeinterval = 1
+OutputMask = 1 1 1 0
+nOutpoints = 0
+PPFileName = 'Amatrice_faultreceivers.dat'
+/
+
+&SourceType
+/
+
+&SpongeLayer
+/
+
+&MeshNml
+MeshFile = 'Amatrice_RF50_200_2000_flattopo'
+meshgenerator = 'PUML'
+/
+
+&Discretization
+CFL = 0.5
+FixTimeStep = 5
+ClusteredLTS = 2
+/
+
+&Output
+FaultOutputFlag = 1
+OutputFile = 'output/data'
+Format = 10
+iOutputMask = 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1
+iOutputMaskMaterial = 1 1 1
+printIntervalCriterion = 2
+TimeInterval = 40.0
+refinement = 1
+nRecordPoints = 20
+RFileName = 'Amatrice_receivers.dat'
+pickdt = 0.005
+pickDtType = 1
+SurfaceOutput = 1
+SurfaceOutputRefinement = 1
+SurfaceOutputInterval = 40.0
+xdmfWriterBackend = 'posix'
+/
+
+&AbortCriteria
+EndTime = 40.0
+/
+
+&Analysis
+/
+
+&Debugging
+/
