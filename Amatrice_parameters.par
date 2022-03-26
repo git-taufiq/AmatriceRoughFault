@@ -46,7 +46,7 @@ PPFileName = 'Amatrice_faultreceivers.dat'
 /
 
 &MeshNml
-MeshFile = 'Amatrice_RF50_200_2000_flattopo'
+MeshFile = 'mesh/Amatrice_RF50_200_2000_topo'
 meshgenerator = 'PUML'
 /
 
@@ -63,7 +63,7 @@ Format = 10
 iOutputMask = 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1
 iOutputMaskMaterial = 1 1 1
 printIntervalCriterion = 2
-TimeInterval = 40.0
+TimeInterval = 1.0
 refinement = 1
 nRecordPoints = 20
 RFileName = 'Amatrice_receivers.dat'
@@ -71,7 +71,7 @@ pickdt = 0.005
 pickDtType = 1
 SurfaceOutput = 1
 SurfaceOutputRefinement = 1
-SurfaceOutputInterval = 40.0
+SurfaceOutputInterval = 0.05
 xdmfWriterBackend = 'posix'
 /
 
